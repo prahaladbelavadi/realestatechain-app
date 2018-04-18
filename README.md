@@ -19,12 +19,30 @@ This boilerplate uses Webpack and React, along with react-router, redux and redu
     npm install
     ```
 
-5. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
+4. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
     ```javascript
     // Serves the front-end on http://localhost:3000
-    npm run start
+    npm start
     ```
 
+### Note: To connect the frontend app to your local RPC server or Ethereum network, use the Metamask browser extension or the Mist wallet/browser. 
+Download [Metamask](https://metamask.io) for Chrome, Firefox or Brave. 
+
+
+## Local RPC server
+### We'll use Ganache (formerly testrpc, included with Truffle) which simulates the Ethereum blockchain in a way that faciitates easy, fast smart contract development
+
+1. Download the [Ganache](http://truffleframework.com/ganache/) app, or use the command line tool:
+    ```javascript
+    npm install -g ganache-cli
+    ```
+
+2. Compile and deploy the smart contracts to your local Ganache server
+    ```javascript
+    truffle deploy --network development
+    ```
+
+## Testing Smart Contracts
 6. Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the development console.
     ```javascript
     // If inside the development console.
@@ -45,7 +63,7 @@ This boilerplate uses Webpack and React, along with react-router, redux and redu
     npm run build
     ```
 
-## Deploying to REC private blockchain
+## Deploying to REC private consortium network (TODO)
 
 1. Install geth
 2. Using the genesis.json, start new blockchain, connect to peers
@@ -61,11 +79,11 @@ This boilerplate uses Webpack and React, along with react-router, redux and redu
     migrate
     ```
 
+## Troubleshooting
+
+If you have trouble connecting truffle to ganache, or the frontend/Metamask to ganache, make sure your ganache host/port and Metamask host/port are the same
+
 ## FAQ
-
-* __How do I use this with the EthereumJS TestRPC?__
-
-    It's as easy as modifying the config file! [Check out our documentation on adding network configurations](http://truffleframework.com/docs/advanced/configuration#networks). Depending on the port you're using, you'll also need to update line 34 of `src/util/web3/getWeb3.js`.
 
 * __Why is there both a truffle.js file and a truffle-config.js file?__
 
