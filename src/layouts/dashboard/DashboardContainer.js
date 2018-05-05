@@ -2,7 +2,7 @@ import Dashboard from './Dashboard'
 import { drizzleConnect } from 'drizzle-react'
 import { withStyles } from "material-ui";
 
-import appStyle from "../../assets/jss/material-dashboard-react/appStyle.jsx";
+//import appStyle from "../../assets/jss/material-dashboard-react/appStyle.jsx";
 
 // May still need this even with data function to refresh component on updates for this contract.
 const mapStateToProps = state => {
@@ -16,4 +16,4 @@ const mapStateToProps = state => {
 
 const DashboardContainer = drizzleConnect(Dashboard, mapStateToProps);
 
-export default withStyles(appStyle)(DashboardContainer)
+export default DashboardContainer

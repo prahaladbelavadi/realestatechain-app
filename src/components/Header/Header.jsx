@@ -47,7 +47,7 @@ function Header({ ...props }) {
             className={classes.appResponsive}
             color="inherit"
             aria-label="open drawer"
-            onClick={props.handleDrawerToggle}
+            onClick={() => {}}
           >
             <Menu />
           </IconButton>
