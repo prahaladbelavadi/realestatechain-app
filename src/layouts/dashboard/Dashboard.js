@@ -5,6 +5,7 @@ import {
   ProfileCard,
   RegularCard,
   Button,
+  Table,
   CustomInput,
   ItemGrid,
   Header,
@@ -129,39 +130,26 @@ class Dashboard extends Component {
                           />
                         </ItemGrid>
                       </Grid>
-                      <Grid container>
-                        <ItemGrid xs={12} sm={12} md={12}>
-                          <InputLabel style={{ color: "#AAAAAA" }}>
-                            About me
-                          </InputLabel>
-                          <CustomInput
-                            labelText="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
-                            id="about-me"
-                            formControlProps={{
-                              fullWidth: true
-                            }}
-                            inputProps={{
-                              multiline: true,
-                              rows: 5
-                            }}
-                          />
-                        </ItemGrid>
-                      </Grid>
                     </div>
                   }
                   footer={<Button color="primary">Update Profile</Button>}
                 />
               </ItemGrid>
               <ItemGrid xs={12} sm={12} md={4}>
-                <ProfileCard
-                  avatar={avatar}
-                  subtitle="Real Estate Chain, LLC"
-                  title="One Beacon Street"
-                  description="Offices of Real Estate Chain, LLC"
-                  footer={
-                    <Button color="primary" round>
-                      Follow
-                    </Button>
+                <RegularCard
+                  plainCard
+                  cardTitle="Property Wallet Strength"
+                  cardSubtitle="Complete the wallet to increase its value"
+                  content={
+                    <Table
+                      tableHeaderColor="primary"
+                      tableData={[
+                        ["Upload 3D Model", "50% Boost"],
+                        ["Upload Property Data", "50% Boost"],
+                        ["Upload Floor Plan","Complete"],
+                        ["Get Verified", "Complete"]
+                      ]}
+                    />
                   }
                 />
               </ItemGrid>
