@@ -47,7 +47,8 @@ Download [Metamask](https://metamask.io) for Chrome, Firefox or Brave.
     ```javascript
     // If inside the development console.
     test
-
+    ```
+    ```javascript
     // If outside the development console..
     truffle test
     ```
@@ -84,6 +85,9 @@ Download [Metamask](https://metamask.io) for Chrome, Firefox or Brave.
 If you have trouble connecting truffle to ganache, or the frontend/Metamask to ganache, make sure your ganache host/port and Metamask host/port are the same
 
 ## FAQ
+
+* __Why am I getting errors about drizzle when I start the app__*
+    Make sure the versions of drizzle and all of it's related packages are at least 1.1.0, and if not then install that version directly.
 
 * __Why is there both a truffle.js file and a truffle-config.js file?__
 

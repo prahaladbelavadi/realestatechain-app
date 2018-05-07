@@ -37,6 +37,8 @@ import ItemGrid from "./Grid/ItemGrid.jsx";
 import Header from "./Header/Header.jsx";
 import HeaderLinks from "./Header/HeaderLinks.jsx";
 
+import TabPanel from "./Tab/TabPanel.js";
+
 import Table from "./Table/Table.jsx";
 
 // ##############################
@@ -76,6 +78,8 @@ export {
   // Header
   Header,
   HeaderLinks,
+  // Tab
+  TabPanel,
   // Table
   Table,
   // Tasks
