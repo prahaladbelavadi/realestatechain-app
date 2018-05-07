@@ -10,12 +10,11 @@ This boilerplate uses Webpack and React, along with react-router, redux and redu
     ```
 
 2. Download or clone this repo box. 
-  ```javascript
-    git clone https://github.com/realestatechain/realestatechain-app.git```
 
 3. Install dependencies
     ```javascript
-    npm install```
+    npm install
+    ```
 
 4. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
     ```javascript
@@ -28,7 +27,7 @@ Download [Metamask](https://metamask.io) for Chrome, Firefox or Brave.
 
 
 ## Local RPC server
-### We'll use Ganache (formerly testrpc, included with Truffle) which simulates the Ethereum blockchain in a way that faciitates easy, fast smart contract development
+### Use Ganache (formerly testrpc, included with Truffle) which simulates the Ethereum blockchain in a way that faciitates easy, fast smart contract development
 
 1. Download the [Ganache](http://truffleframework.com/ganache/) app, or use the command line tool:
     ```javascript
