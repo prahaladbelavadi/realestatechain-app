@@ -11,13 +11,11 @@ This boilerplate uses Webpack and React, along with react-router, redux and redu
 
 2. Download or clone this repo box. 
   ```javascript
-    git clone https://github.com/realestatechain/realestatechain-app.git
-    ```
+    git clone https://github.com/realestatechain/realestatechain-app.git```
 
 3. Install dependencies
     ```javascript
-    npm install
-    ```
+    npm install```
 
 4. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
     ```javascript
