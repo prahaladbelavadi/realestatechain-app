@@ -4,13 +4,14 @@ import { Grid, InputLabel, withStyles } from "material-ui";
 import {
   ProfileCard,
   RegularCard,
-  Button,
   Table,
+  Button,
   CustomInput,
   ItemGrid,
   Header,
   Footer,
-  TabPanel
+  TabPanel,
+  ProgressBar
 } from "../../components";
 
 import UserProfile from "../../user/layouts/profile/Profile.js";
@@ -48,6 +49,7 @@ class Dashboard extends Component {
                 <TabPanel />
               </ItemGrid>
               <ItemGrid xs={12} sm={12} md={4}>
+                <ProgressBar />
                 <RegularCard
                   plainCard
                   cardTitle="Property Wallet Strength"
