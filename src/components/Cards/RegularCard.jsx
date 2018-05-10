@@ -18,6 +18,7 @@ function RegularCard({ ...props }) {
     plainCard,
     cardTitle,
     cardSubtitle,
+    cardAction,
     content,
     footer
   } = props;
@@ -41,6 +42,9 @@ function RegularCard({ ...props }) {
         }}
         title={cardTitle}
         subheader={cardSubtitle}
+        action={
+          cardAction
+        }
       />
       <CardContent>{content}</CardContent>
       {footer !== undefined ? (
@@ -60,6 +64,7 @@ RegularCard.propTypes = {
   headerColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
   cardTitle: PropTypes.node,
   cardSubtitle: PropTypes.node,
+  cardAction: PropTypes.node,
   content: PropTypes.node,
   footer: PropTypes.node
 };

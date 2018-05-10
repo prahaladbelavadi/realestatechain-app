@@ -49,6 +49,11 @@ const regularCardStyle = {
     padding: "14px",
     display: "block",
     height: "auto"
+  },
+  avatar: {
+    backgroundColor: 'gray',
+    color: 'white',
+    
   }
 };
 

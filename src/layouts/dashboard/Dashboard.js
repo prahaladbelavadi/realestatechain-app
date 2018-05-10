@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { Grid, InputLabel, withStyles } from "material-ui";
+import { Grid, InputLabel, withStyles, Typography } from "material-ui";
 
 import {
   ProfileCard,
   RegularCard,
   Table,
   Button,
+  Badge,
   CustomInput,
   ItemGrid,
   Header,
@@ -49,21 +50,22 @@ class Dashboard extends Component {
                 <TabPanel />
               </ItemGrid>
               <ItemGrid xs={12} sm={12} md={4}>
-                <ProgressBar />
                 <RegularCard
                   plainCard
-                  cardTitle="Property Wallet Strength"
-                  cardSubtitle="Complete the wallet to increase its value"
+                  cardTitle="Property Wallet Strength &nbsp;&nbsp;&nbsp; 50%"
                   content={
-                    <Table
-                      tableHeaderColor="primary"
-                      tableData={[
-                        ["Upload 3D Model", "50% Boost"],
-                        ["Upload Property Data", "50% Boost"],
-                        ["Upload Floor Plan","Complete"],
-                        ["Get Verified", "Complete"]
-                      ]}
-                    />
+                    <div>
+                      <ProgressBar />
+                      <Table
+                        tableHeaderColor="primary"
+                        tableData={[
+                          ["Upload 3D Model", "50% Boost"],
+                          ["Upload Property Data", "50% Boost"],
+                          ["Upload Floor Plan","Complete"],
+                          ["Get Verified", "Complete"]
+                        ]}
+                      />
+                    </div>
                   }
                 />
               </ItemGrid>

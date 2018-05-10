@@ -1,4 +1,4 @@
-import { React, Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 
@@ -6,8 +6,10 @@ import ItemGrid from '../Grid/ItemGrid.jsx';
 import RegularCard from '../Cards/RegularCard.jsx';
 import Table from '../Table/Table.jsx';
 
-class WalletTasks extends Component {
-  constructor(props, { authData }) {
+import tasksStyle from "../../assets/jss/material-dashboard-react/tasksStyle.jsx";
+
+class WalletTasks extends React.Component {
+  constructor(props) {
     super(props)
   }
 
@@ -33,4 +35,10 @@ class WalletTasks extends Component {
   }
 }
 
-export default WalletTasks;
+WalletTasks.propTypes = {
+  classes: PropTypes.object.isRequired,
+  tasksIndexes: PropTypes.arrayOf(PropTypes.number),
+  tasks: PropTypes.arrayOf(PropTypes.node)
+};
+
+export default withStyles(tasksStyle)(WalletTasks);

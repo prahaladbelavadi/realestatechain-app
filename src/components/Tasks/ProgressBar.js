@@ -5,6 +5,7 @@ import MobileStepper from 'material-ui/MobileStepper';
 import Button from 'material-ui/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import Grid from 'material-ui/Grid';
 
 const styles = {
   root: {
@@ -34,13 +35,15 @@ class ProgressBar extends React.Component {
     const { classes, theme } = this.props;
 
     return (
-      <MobileStepper
-        variant="progress"
-        steps={6}
-        position="static"
-        activeStep={this.state.activeStep}
-        className={classes.root}
-      />
+      <Grid container>
+        <MobileStepper
+          variant="progress"
+          steps={6}
+          position="static"
+          activeStep={this.state.activeStep}
+          className={classes.root}
+        />  
+      </Grid>
     );
   }
 }
