@@ -46,7 +46,7 @@ import Table from "./Table/Table.jsx";
 // #############################
 
 import Tasks from "./Tasks/Tasks.jsx";
-import WalletTasks from "./Tasks/WalletTasks.js";
+import TaskButton from "./Tasks/TaskButton.js";
 import ProgressBar from "./Tasks/ProgressBar.js";
 
 // ##############################
@@ -86,7 +86,7 @@ export {
   Table,
   // Tasks
   Tasks,
-  WalletTasks,
+  TaskButton,
   ProgressBar,
   // Typography
   P,

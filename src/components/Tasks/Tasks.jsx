@@ -3,15 +3,20 @@ import {
   withStyles,
   Checkbox,
   IconButton,
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
   Tooltip
 } from "material-ui";
 import { Edit, Close, Check } from "@material-ui/icons";
 
 import PropTypes from "prop-types";
+
+import {
+  ProfileCard,
+  RegularCard,
+  Table,
+  Button,
+  TaskButton,
+  ProgressBar
+} from "../../components";
 
 import tasksStyle from "../../assets/jss/material-dashboard-react/tasksStyle.jsx";
 
@@ -34,14 +39,29 @@ class Tasks extends React.Component {
       checked: newChecked
     });
   };
+
+
   render() {
     const { classes, tasksIndexes, tasks } = this.props;
     return (
-      <Table className={classes.table}>
-        <TableBody>
-          
-        </TableBody>
-      </Table>
+      <RegularCard
+        plainCard
+        cardTitle="Property Wallet Strength &nbsp;&nbsp;&nbsp; 50%"
+        content={
+          <div>
+            <ProgressBar />
+            <Table
+              tableHeaderColor="primary"
+              tableData={[
+                [<TaskButton buttonText="Upload Photos" />, "50% Boost"],
+                [<TaskButton buttonText="Upload Property Data" />, "50% Boost"],
+                [<TaskButton buttonText="Upload Floorplan" />, "Complete"],
+                [<TaskButton buttonText="Get Verified" />, "Complete"]
+              ]}
+            />
+          </div>
+        }
+      />
     );
   }
 }

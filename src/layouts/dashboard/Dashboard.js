@@ -16,6 +16,7 @@ import {
 } from "../../components";
 
 import UserProfile from "../../user/layouts/profile/Profile.js";
+import { Tasks } from "../../components";
 
 import {
   Dashboard as DashboardIcon,
@@ -50,24 +51,7 @@ class Dashboard extends Component {
                 <TabPanel />
               </ItemGrid>
               <ItemGrid xs={12} sm={12} md={4}>
-                <RegularCard
-                  plainCard
-                  cardTitle="Property Wallet Strength &nbsp;&nbsp;&nbsp; 50%"
-                  content={
-                    <div>
-                      <ProgressBar />
-                      <Table
-                        tableHeaderColor="primary"
-                        tableData={[
-                          ["Upload 3D Model", "50% Boost"],
-                          ["Upload Property Data", "50% Boost"],
-                          ["Upload Floor Plan","Complete"],
-                          ["Get Verified", "Complete"]
-                        ]}
-                      />
-                    </div>
-                  }
-                />
+                <Tasks />
               </ItemGrid>
             </Grid>
           </div>

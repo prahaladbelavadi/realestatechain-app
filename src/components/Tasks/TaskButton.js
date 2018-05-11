@@ -9,40 +9,20 @@ const styles = theme => ({
   },
 });
 
-function doSomething(event) {
-  // eslint-disable-next-line no-console
-  console.log(event.currentTarget.getAttribute('data-something'));
-}
+function TaskButton(props) {
+  const { classes, buttonText, buttonAction } = props;
 
-function FlatButtons(props) {
-  const { classes } = props;
   return (
-    <div>
-      <Button className={classes.button}>Default</Button>
-      <Button color="primary" className={classes.button}>
-        Primary
-      </Button>
-      <Button color="secondary" className={classes.button}>
-        Secondary
-      </Button>
-      <Button disabled className={classes.button}>
-        Disabled
-      </Button>
-      <Button href="#flat-buttons" className={classes.button}>
-        Link
-      </Button>
-      <Button disabled href="/" className={classes.button}>
-        Link disabled
-      </Button>
-      <Button className={classes.button} onClick={doSomething} data-something="here I am">
-        Does something
-      </Button>
-    </div>
+    <Button className={classes.button} onClick={buttonAction || ( () => {})} data-something="something">
+      { buttonText }
+    </Button>
   );
 }
 
-FlatButtons.propTypes = {
+TaskButton.propTypes = {
   classes: PropTypes.object.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  buttonAction: PropTypes.func
 };
 
-export default withStyles(styles)(FlatButtons);
+export default withStyles(styles)(TaskButton);
