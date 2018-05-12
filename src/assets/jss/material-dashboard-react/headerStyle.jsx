@@ -38,6 +38,26 @@ const headerStyle = theme => ({
   flex: {
     flex: 1
   },
+  walletInfo: {
+    display: "flex",
+    flex: 1,
+    justifyContent: "flex-start",
+    alignItems: "stretch",
+    "& > div": {
+      display: "flex",
+      justifyContent: "flex-start",
+      alignItems: "center",
+      "& > p": {
+        margin: "15px"
+      }
+    }
+  },
+  accountInfo: {
+
+  },
+  rezLabel: {
+    marginLeft: "0.2em"
+  },
   title: {
     ...defaultFont,
     lineHeight: "30px",

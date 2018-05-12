@@ -17,6 +17,7 @@ import {
   TaskButton,
   ProgressBar
 } from "../../components";
+import { AccountData, ContractData, ContractForm } from 'drizzle-react-components';
 
 import tasksStyle from "../../assets/jss/material-dashboard-react/tasksStyle.jsx";
 
@@ -42,7 +43,7 @@ class Tasks extends React.Component {
 
 
   render() {
-    const { classes, tasksIndexes, tasks } = this.props;
+    const { classes, tasksIndexes, tasks, accounts } = this.props;
     return (
       <RegularCard
         plainCard

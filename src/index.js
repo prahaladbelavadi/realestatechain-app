@@ -22,6 +22,7 @@ ReactDOM.render((
         <Router history={history}>
           <Route path="/" component={App}>
             <IndexRoute component={DashboardContainer} />
+            <Route path="/home" component={HomeContainer} />
           </Route>
         </Router>
       </LoadingContainer>

@@ -10,6 +10,7 @@ import {
   Button
 } from "material-ui";
 import cx from "classnames";
+import { AccountData, ContractData, ContractForm } from 'drizzle-react-components';
 
 import headerStyle from "../../assets/jss/material-dashboard-react/headerStyle.jsx";
 
@@ -33,11 +34,16 @@ function Header({ ...props }) {
   return (
     <AppBar className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
-        <div className={classes.flex}>
+        <div className={classes.walletInfo}>
           {/* Here we create navbar brand, based on route name */}
           <Button href="#" className={classes.title}>
             {makeBrand()}
           </Button>
+          <AccountData accountIndex="0" units="ether" precision="3" />
+          <div className={classes.accountInfo}>
+            <ContractData contract="REZ" method="balanceOf" methodArgs={[props.accounts[0]]} />
+            <span className={classes.rezLabel}>REZ</span>
+          </div>
         </div>
         <Hidden smDown implementation="css">
           <HeaderLinks />
@@ -59,7 +65,8 @@ function Header({ ...props }) {
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired,
-  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"])
+  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"]),
+  accounts: PropTypes.object.isRequired,
 };
 
 export default withStyles(headerStyle)(Header);
