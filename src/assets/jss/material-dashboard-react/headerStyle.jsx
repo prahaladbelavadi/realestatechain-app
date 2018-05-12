@@ -55,7 +55,7 @@ const headerStyle = theme => ({
   accountInfo: {
 
   },
-  rezLabel: {
+  rezTokenLabel: {
     marginLeft: "0.2em"
   },
   title: {

@@ -86,6 +86,12 @@ If you have trouble connecting truffle to ganache, or the frontend/Metamask to g
 * __Why am I getting errors about drizzle when I start the app__*
     Make sure the versions of drizzle and all of it's related packages are at least 1.1.0, and if not then install that version directly.
 
+* __I'm unable to migrate contracts on my local ganache server__*
+    You have to unlock the account you use to upload smart contracts. Pick an address out of the list of accounts Ganache started with. Then add the account to your truffle.js file:
+    ```javascript
+    from: "0x627306090abaB3A6e1400e9345bC60c78a8BEf57"
+    ```
+
 * __Why is there both a truffle.js file and a truffle-config.js file?__
 
     `truffle-config.js` is a copy of `truffle.js` for compatibility with Windows development environments. Feel free to it if it's irrelevant to your platform.
