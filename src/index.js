@@ -13,19 +13,29 @@ import { LoadingContainer } from 'drizzle-react-components'
 import store from './store'
 import drizzleOptions from './drizzleOptions'
 
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
+
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
+});
+
 // Initialize react-router-redux.
 const history = syncHistoryWithStore(browserHistory, store)
 
 ReactDOM.render((
     <DrizzleProvider options={drizzleOptions} store={store}>
-      <LoadingContainer>
-        <Router history={history}>
-          <Route path="/" component={App}>
-            <IndexRoute component={DashboardContainer} />
-            <Route path="/home" component={HomeContainer} />
-          </Route>
-        </Router>
-      </LoadingContainer>
+      <MuiThemeProvider theme={theme}>
+        <LoadingContainer>
+          <Router history={history}>
+            <Route path="/" component={App}>
+              <IndexRoute component={DashboardContainer} />
+              <Route path="/home" component={HomeContainer} />
+            </Route>
+          </Router>
+        </LoadingContainer>
+      </MuiThemeProvider>
     </DrizzleProvider>
   ),
   document.getElementById('root')

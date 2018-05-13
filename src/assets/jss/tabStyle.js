@@ -2,14 +2,15 @@
 // // // Dashboard styles
 // #############################
 
-import { greenCardColor } from "./material-dashboard-react.jsx";
+import { greenCardColor, darkModeColor } from "./material-dashboard-react.jsx";
 
 const tabStyle = {
   tab: {
 	  textAlign: "center",
 	  cursor: "pointer",
 	  border: "2px solid transparent",
-	  padding: "12px 6px"
+	  padding: "12px 6px",
+	  backgroundColor: darkModeColor
 	},
 	tabActive: {
 	  backgroundColor: "transparent"
@@ -30,7 +31,7 @@ const tabStyle = {
 		}
 	},
 	tabStrip: {
-  	backgroundColor: "#e8e8e8",
+  	backgroundColor: darkModeColor,
   	display: "flex",
   	justifyContent: "flex-start",
   	indicator: {

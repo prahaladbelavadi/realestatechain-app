@@ -5,16 +5,17 @@ import Tabs, { Tab } from 'material-ui/Tabs';
 import { Grid } from 'material-ui';
 
 import Typography from 'material-ui/Typography';
+import { greenCardColor, darkModeColor } from "../../assets/jss/material-dashboard-react.jsx";
 
 import ItemGrid from '../Grid/ItemGrid.jsx';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: darkModeColor,
   },
   tabsRoot: {
-    borderBottom: '1px solid #e8e8e8',
+    
   },
   tabsIndicator: {
     backgroundColor: '#1890ff',
@@ -24,6 +25,7 @@ const styles = theme => ({
     minWidth: 72,
     fontWeight: theme.typography.fontWeightRegular,
     marginRight: theme.spacing.unit * 4,
+    color: "#fff",
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',

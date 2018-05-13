@@ -2,13 +2,14 @@
 // // // App styles
 // #############################
 
-import { drawerWidth, transition, container } from "../material-dashboard-react.jsx";
+import { drawerWidth, darkModeColor, transition, container } from "../material-dashboard-react.jsx";
 
 const appStyle = theme => ({
   wrapper: {
     position: "relative",
     top: "0",
-    height: "100vh"
+    height: "100vh",
+    background: darkModeColor
   },
   mainPanel: {
     [theme.breakpoints.up("md")]: {

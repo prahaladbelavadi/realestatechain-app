@@ -4,6 +4,7 @@
 
 import {
   defaultFont,
+  darkModeColor,
   dangerColor,
   primaryColor,
   primaryBoxShadow
@@ -62,7 +63,7 @@ const headerLinksStyle = theme => ({
       display: "block",
       width: "30px",
       height: "30px",
-      color: "#a9afbb",
+      color: "#99AAB5",
       marginRight: "15px"
     }
   },
@@ -102,7 +103,7 @@ const headerLinksStyle = theme => ({
     fontSize: "14px",
     textAlign: "left",
     listStyle: "none",
-    backgroundColor: "#fff",
+    backgroundColor: darkModeColor,
     backgroundClip: "padding-box"
   },
   pooperResponsive: {
@@ -115,7 +116,7 @@ const headerLinksStyle = theme => ({
       backgroundColor: "transparent",
       border: "0",
       boxShadow: "none",
-      color: "black"
+      color: "white"
     }
   },
   dropdownItem: {

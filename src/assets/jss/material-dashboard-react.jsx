@@ -20,6 +20,9 @@
 
 const drawerWidth = 60;
 
+const darkModeColor = "#2C2F33";
+const greyColor = "#99AAB5";
+
 const transition = {
   transition: "all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)"
 };
@@ -44,7 +47,7 @@ const card = {
   boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.14)",
   borderRadius: "3px",
   color: "rgba(0, 0, 0, 0.87)",
-  background: "#fff",
+  background: darkModeColor,
   overflow: "visible",
 };
 
@@ -61,6 +64,7 @@ const successColor = "#4caf50";
 const infoColor = "#00acc1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
+
 
 const primaryBoxShadow = {
   boxShadow:
@@ -130,6 +134,7 @@ const defaultBoxShadow = {
 export {
   //variables
   drawerWidth,
+  darkModeColor,
   transition,
   container,
   boxShadow,

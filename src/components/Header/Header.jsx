@@ -13,6 +13,7 @@ import cx from "classnames";
 import { AccountData, ContractData, ContractForm } from 'drizzle-react-components';
 
 import headerStyle from "../../assets/jss/material-dashboard-react/headerStyle.jsx";
+import logo from "../../assets/img/rec-logo.png";
 
 import HeaderLinks from "./HeaderLinks";
 
@@ -37,7 +38,7 @@ function Header({ ...props }) {
         <div className={classes.walletInfo}>
           {/* Here we create navbar brand, based on route name */}
           <Button href="#" className={classes.title}>
-            {makeBrand()}
+           <img src={logo} />
           </Button>
           <AccountData accountIndex="0" units="ether" precision="3" />
           <div className={classes.accountInfo}>
@@ -65,7 +66,7 @@ function Header({ ...props }) {
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired,
-  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"]),
+  color: PropTypes.oneOf(["primary", "info", "success", "warning", "grey"]),
   accounts: PropTypes.object.isRequired,
 };
 

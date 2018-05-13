@@ -50,10 +50,13 @@ const regularCardStyle = {
     display: "block",
     height: "auto"
   },
+  cardContent: {
+    paddingLeft: "0",
+  },
   avatar: {
     backgroundColor: 'gray',
     color: 'white',
-    
+
   }
 };
 

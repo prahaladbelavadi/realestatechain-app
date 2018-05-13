@@ -5,7 +5,9 @@
 import {
   container,
   defaultFont,
+  darkModeColor,
   primaryColor,
+  greyColor,
   defaultBoxShadow,
   infoColor,
   successColor,
@@ -23,7 +25,7 @@ const headerStyle = theme => ({
     width: "100%",
     paddingTop: "10px",
     zIndex: "1029",
-    color: "#555555",
+    color: greyColor,
     border: "0",
     borderRadius: "3px",
     padding: "10px 0",
@@ -95,6 +97,11 @@ const headerStyle = theme => ({
   danger: {
     backgroundColor: dangerColor,
     color: "#FFFFFF",
+    ...defaultBoxShadow
+  },
+  grey: {
+    backgroundColor: darkModeColor,
+    color: greyColor,
     ...defaultBoxShadow
   }
 });

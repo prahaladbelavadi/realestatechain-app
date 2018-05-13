@@ -9,9 +9,12 @@ import Grid from 'material-ui/Grid';
 
 const styles = {
   root: {
-    maxWidth: 400,
-    flexGrow: 1,
+    maxWidth: 420,
+    flexGrow: 1
   },
+  dotActive: {
+    background: "#27ae5f"
+  }
 };
 
 class ProgressBar extends React.Component {
@@ -35,22 +38,19 @@ class ProgressBar extends React.Component {
     const { classes, theme } = this.props;
 
     return (
-      <Grid container>
-        <MobileStepper
-          variant="progress"
-          steps={6}
-          position="static"
-          activeStep={this.state.activeStep}
-          className={classes.root}
-        />  
-      </Grid>
+      <MobileStepper
+        variant="progress"
+        steps={6}
+        position="static"
+        activeStep={this.state.activeStep}
+        classes={classes}
+      />  
     );
   }
 }
 
 ProgressBar.propTypes = {
   classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(ProgressBar);
+export default withStyles(styles)(ProgressBar);
