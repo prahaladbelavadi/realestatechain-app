@@ -22,9 +22,34 @@ import { AccountData, ContractData, ContractForm } from 'drizzle-react-component
 import tasksStyle from "../../assets/jss/material-dashboard-react/tasksStyle.jsx";
 
 class Tasks extends React.Component {
-  state = {
-    checked: this.props.checkedIndexes
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      imageURL: '',
+      checked: this.props.checkedIndexes
+    };
+
+    this.handleUploadImage = this.handleUploadImage.bind(this);
+  }
+
+  handleUploadImage(ev)  {
+    ev.preventDefault();
+
+    const data = new FormData();
+    data.append('file', this.uploadInput.files[0]);
+    data.append('filename', "testUpload");
+
+    fetch('http://localhost:3000/upload', {
+      method: 'POST',
+      body: data,
+    }).then((response) => {
+      response.json().then((body) => {
+        this.setState({ imageURL: `http://localhost:3000/${body.file}` });
+      });
+    });
+  }
+
   handleToggle = value => () => {
     const { checked } = this.state;
     const currentIndex = checked.indexOf(value);
@@ -41,7 +66,6 @@ class Tasks extends React.Component {
     });
   };
 
-
   render() {
     const { classes, tasksIndexes, tasks, accounts } = this.props;
     return (
@@ -54,7 +78,12 @@ class Tasks extends React.Component {
             <Table
               tableHeaderColor="primary"
               tableData={[
-                [<TaskButton buttonText="Upload Photos" />, "50% Boost"],
+                [<TaskButton 
+                  buttonText="Upload Photos" 
+                  buttonAction={this.handleUploadImage} 
+                  buttonContent={
+                    <input ref={(ref) => { this.uploadInput = ref; }} type="file" />
+                  } />, "50% Boost"],
                 [<TaskButton buttonText="Upload Property Data" />, "50% Boost"],
                 [<TaskButton buttonText="Upload Floorplan" />, "Complete"],
                 [<TaskButton buttonText="Get Verified" />, "Complete"]
