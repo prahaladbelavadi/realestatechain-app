@@ -1,6 +1,6 @@
 # Real Estate Chain Prototype
 
-This boilerplate uses Webpack and React, along with react-router, redux and redux-auth-wrapper for authentication powered by a smart contract. 
+This boilerplate uses Webpack and React, along with react-router, redux and redux-auth-wrapper for authentication powered by a smart contract.
 
 ## Installation
 
@@ -9,7 +9,7 @@ This boilerplate uses Webpack and React, along with react-router, redux and redu
     npm install -g truffle
     ```
 
-2. Download or clone this repo box. 
+2. Download or clone this repo box.
 
 3. Install dependencies
     ```javascript
@@ -22,8 +22,8 @@ This boilerplate uses Webpack and React, along with react-router, redux and redu
     npm start
     ```
 
-### Note: To connect the frontend app to your local RPC server or Ethereum network, use the Metamask browser extension or the Mist wallet/browser. 
-Download [Metamask](https://metamask.io) for Chrome, Firefox or Brave. 
+### Note: To connect the frontend app to your local RPC server or Ethereum network, use the Metamask browser extension or the Mist wallet/browser.
+Download [Metamask](https://metamask.io) for Chrome, Firefox or Brave.
 
 
 ## Local RPC server
@@ -94,7 +94,7 @@ If you have trouble connecting truffle to ganache, or the frontend/Metamask to g
 
 * __Why is there both a truffle.js file and a truffle-config.js file?__
 
-    `truffle-config.js` is a copy of `truffle.js` for compatibility with Windows development environments. Feel free to it if it's irrelevant to your platform.
+    `truffle-config.js` is a copy of `truffle.js` for compatibility with Windows development environments. Feel free to remove it if it's irrelevant to your platform.
 
 * __Where is my production build?__
 
